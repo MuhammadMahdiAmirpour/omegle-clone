@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="chat-container">
+    <div class="video-section">
+        <div class="video-wrapper">
+            <video id="localVideo" autoplay muted playsinline></video>
+            <span class="video-label">You</span>
+        </div>
+        <div class="video-wrapper">
+            <video id="remoteVideo" autoplay playsinline></video>
+            <span class="video-label">Partner</span>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="startButton">Start Chat</button>
+        <button id="skipButton">Skip Partner</button>
+        <button id="disconnectButton">End Chat</button>
+    </div>
+
+    <div class="chat-section">
+        <div id="messages" class="messages"></div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
